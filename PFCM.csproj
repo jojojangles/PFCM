@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Pbody.cs" />
     <Compile Include="Pclass.cs" />
+    <Compile Include="Pgear.cs" />
+    <Compile Include="Prace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pskill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
