@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PFCM
 {
-    class Pskill
+    class Pclass
     {
         string name;
     }
