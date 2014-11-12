@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-public class Pskill
+namespace PFCM
 {
-	public Pskill()
-	{
-	}
+    class Pskill
+    {
+        string name;
+    }
 }
