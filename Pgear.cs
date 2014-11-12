@@ -11,6 +11,7 @@ namespace PFCM
         Boolean usable; //is it activateble?
         int charges; //only needed if usable, -1 if NA
         Boolean equipable; //is it worn?
+        Boolean improvisedWep; //can it be used to attack?
         Pbody slot; //what slot is the object worn on? set to Inventory if NA
         int value; //using gold as unit
 

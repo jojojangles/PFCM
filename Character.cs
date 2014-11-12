@@ -17,10 +17,12 @@ namespace PFCM
         int AC, armor, shield, deflection, size, natarmor, miscAC, touchAC, flatfootAC;
         int initiative, initMisc;
         int totalHP, damresist, wounds, nonlethal;
-
+        List<Pgear> weapons; //specifically, what attacks can this character make
+        List<Pspell> mySpellbook; //strictly spell-caster spells
+        List<Pabilities> myAbilities; //all spell-likes or extra combat-affecting or skill boosting abilities
+        List<Pfeats> myFeats; //all feats, including activatables (which should appear in abilities as well)
 
         
-
         static void Main(string[] args)
         {
         }
