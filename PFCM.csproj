@@ -42,15 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="CombatActionFeat.cs" />
     <Compile Include="PAbilities.cs" />
     <Compile Include="PBody.cs" />
     <Compile Include="Pclass.cs" />
-    <Compile Include="PFeats.cs" />
+    <Compile Include="PFeat.cs" />
     <Compile Include="PGear.cs" />
     <Compile Include="PRace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PSkill.cs" />
     <Compile Include="PSpell.cs" />
+    <Compile Include="SkillBonusFeat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

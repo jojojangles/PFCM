@@ -5,10 +5,9 @@ using System.Text;
 
 namespace PFCM
 {
-    class PSkill
+    class PFeat
     {
         string name;
-        Boolean trained;
-        int total, bonus, rank, misc;
+        PFeat prereq;
     }
 }

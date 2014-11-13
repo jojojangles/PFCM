@@ -21,7 +21,7 @@ namespace PFCM
         List<PGear> myWeapons; //specifically, what attacks can this character make
         List<PSpell> mySpellbook; //strictly spell-caster spells
         List<PAbilities> myAbilities; //all spell-likes or extra combat-affecting or skill boosting abilities
-        List<PFeats> myFeats; //all feats, including activatables (which should appear in abilities as well)
+        List<PFeat> myFeats; //all feats, including activatables (which should appear in abilities as well)
 
         public Player()
         {
@@ -40,7 +40,7 @@ namespace PFCM
             myWeapons = new List<PGear>();
             mySpellbook = new List<PSpell>();
             myAbilities = new List<PAbilities>();
-            myFeats = new List<PFeats>();
+            myFeats = new List<PFeat>();
         }
     }
 }

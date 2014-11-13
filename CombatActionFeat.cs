@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PFCM
 {
-    class PFeats
+    class CombatActionFeat : PFeat
     {
     }
 }
