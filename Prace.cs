@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PFCM
 {
-    class Prace
+    class PRace
     {
         string name;
         int STR, DEX, CON, INT, WIS, CHA; //racial bonuses
