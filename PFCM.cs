@@ -111,7 +111,7 @@ namespace PFCM
                 else
                 {
                     string not_enough = "You don't have enough points to make this change.";
-                    string minimum = "You may not reduce the value of any ability score below seven.";
+                    string minimum = "You may not reduce the value of any ability score below seven or raise the value above 18.";
                     string test = System.Console.ReadLine();
                     if (test.Length == 1 && test.ElementAt(0) == '+')
                     {
@@ -150,6 +150,39 @@ namespace PFCM
                         continue;
                     }
                     //let user try to set value here
+                    int ability_value = 0;
+                    try
+                    {
+                        ability_value = Convert.ToInt32(test);
+                    }
+                    catch (Exception e)
+                    {
+                        System.Console.WriteLine("Whatever you just did, don't. One reasonably sized integer, please.");
+                    }
+                    finally
+                    {
+                        //if it's valid, do things
+                        if (ability_value >= 7 && ability_value <= 18)
+                        {
+                            int init_val = initial.getBase((ABILITY_SCORES)(target - 1));
+                            int change = calcDiff(init_val, ability_value);
+                            if (starting_points - change >= 0)
+                            {
+                                //valid change
+                                starting_points -= change;
+                                initial.setBase((ABILITY_SCORES)(target - 1), ability_value);
+                            }
+                            else
+                            {
+                                System.Console.WriteLine(not_enough);
+                            }
+                            target = 0;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine(minimum);
+                        }
+                    }
                 }
             }
             return initial;
