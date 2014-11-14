@@ -28,6 +28,16 @@ namespace PFCM
                 temp = temporary;
             }
 
+            public int getAttrib(ABILITY_SCORES attrib) 
+            {
+                return values[(int)attrib];
+            }
+
+            public void setAttrib(ABILITY_SCORES attrib, int val)
+            {
+                values[(int)attrib] = val;
+            }
+
             //does not check types
             public scores(scores A, scores B)
             {
@@ -95,8 +105,9 @@ namespace PFCM
         private void configure(int str, int dex, int con, int intl, int wis, int cha)
         {
             all_scores = new HashSet<scores>();
-            scores base_scores = new scores(str, dex, con, intl, wis, cha, BONUS_TYPES.BASE, false);
+            base_scores = new scores(str, dex, con, intl, wis, cha, BONUS_TYPES.BASE, false);
             calcScores(false);
+            calcScores(true);
             recalculate_temp = false;
             recalculate_all = false;
         }
@@ -148,6 +159,30 @@ namespace PFCM
         public void clear()
         {
             all_scores.Clear();
+            recalculate_all = true;
+            recalculate_temp = true;
+        }
+
+        public int getBase(ABILITY_SCORES attrib)
+        {
+            return base_scores.getAttrib(attrib);
+        }
+
+        public int getPermanent(ABILITY_SCORES attrib)
+        {
+            if (recalculate_all) { calcScores(false); calcScores(true); recalculate_temp = false; recalculate_all = false; }
+            return permanent.getAttrib(attrib);
+        }
+
+        public int getCurrent(ABILITY_SCORES attrib)
+        {
+            if (recalculate_temp || recalculate_all) { calcScores(true); recalculate_temp = false; }
+            return current.getAttrib(attrib);
+        }
+
+        public void setBase(ABILITY_SCORES attrib, int val)
+        {
+            base_scores.setAttrib(attrib, val);
             recalculate_all = true;
             recalculate_temp = true;
         }
@@ -247,7 +282,37 @@ namespace PFCM
                 if (recalculate_all) { calcScores(false); calcScores(true); recalculate_temp = false; recalculate_all = false; }
                 return permanent.charisma;
             }
-        }
 
+        }
+        public int STR_base
+        {
+            get { return base_scores.strength; }
+            set { base_scores = new scores(base_scores, new scores(value, 0, 0, 0, 0, 0, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
+        public int DEX_base
+        {
+            get { return base_scores.dexterity; }
+            set { base_scores = new scores(base_scores, new scores(0, value, 0, 0, 0, 0, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
+        public int CON_base
+        {
+            get { return base_scores.constitution; }
+            set { base_scores = new scores(base_scores, new scores(0, 0, value, 0, 0, 0, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
+        public int INT_base
+        {
+            get { return base_scores.intelligence; }
+            set { base_scores = new scores(base_scores, new scores(0, 0, 0, value, 0, 0, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
+        public int WIS_base
+        {
+            get { return base_scores.wisdom; }
+            set { base_scores = new scores(base_scores, new scores(0, 0, 0, 0, value, 0, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
+        public int CHA_base
+        {
+            get { return base_scores.charisma; }
+            set { base_scores = new scores(base_scores, new scores(0, 0, 0, 0, 0, value, BONUS_TYPES.BASE, false)); recalculate_all = true; recalculate_temp = true; }
+        }
     }
 }

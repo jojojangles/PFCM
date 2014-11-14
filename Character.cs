@@ -11,8 +11,7 @@ namespace PFCM
         List<Tuple<PClass, int>> myClasses; //List of <class object,level>
         List<Tuple<PSkill, int>> mySkills; //List of <skill object,total>
         PRace myRace; //Player race object
-        int STR, DEX, CON, INT, WIS, CHA; //Ability scores
-        int STRb, DEXb, CONb, INTb, WISb, CHAb; //Ability score bonuses
+        AbilityScores scores; //Player ability score tracker
         Dictionary<PBody,PGear> myEquipped; //List of <body part object,gear object>
         List<Tuple<PGear, int>> myBackpack; //List of <gear object,qty>
         int AC, armor, shield, deflection, size, natarmor, miscAC, touchAC, flatfootAC, baseAC;
@@ -27,12 +26,7 @@ namespace PFCM
         {
             myRace = new PRace();
             baseAC = 10;
-            STR = 10;
-            DEX = 10;
-            CON = 10;
-            INT = 10;
-            WIS = 10;
-            CHA = 10;
+            scores = new AbilityScores();
             myClasses = new List<Tuple<PClass,int>>();
             mySkills = new List<Tuple<PSkill, int>>();
             myEquipped = new Dictionary<PBody, PGear>();

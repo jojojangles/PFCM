@@ -10,4 +10,5 @@ namespace PFCM
                                         INHERENT, INSIGHT, LUCK, MORALE, NATARM, PROF, RACE, 
                                         RESIST, SACRED, SHIELD, SIZE, TRAIT, UNTYPED };
     public enum ABILITY_SCORES : byte { STR = 0, DEX, CON, INT, WIS, CHA };
+
 }

@@ -44,14 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityScores.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CombatActionFeat.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="PAbilities.cs" />
     <Compile Include="PBody.cs" />
     <Compile Include="Pclass.cs" />
     <Compile Include="PFeat.cs" />
     <Compile Include="PFCM.cs" />
-    <Compile Include="PFeats.cs" />
     <Compile Include="PGear.cs" />
     <Compile Include="PRace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
