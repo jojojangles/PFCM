@@ -189,6 +189,7 @@ namespace PFCM
             }
             return initial;
         }
+        [STAThread]
         static void Main(string[] args)
         {
             HashSet<Player> characters = new HashSet<Player>();
@@ -198,7 +199,7 @@ namespace PFCM
             //AbilityScores scores = pointBuy(20);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Application.Run(new MainWindow());
 
         }
     }
