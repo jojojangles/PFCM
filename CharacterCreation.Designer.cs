@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
+            this.PointsLeft = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Strength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dexterity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Constitution)).BeginInit();
@@ -56,6 +57,16 @@
             this.Strength.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Strength.ForeColor = System.Drawing.SystemColors.Info;
             this.Strength.Location = new System.Drawing.Point(27, 31);
+            this.Strength.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Strength.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Strength.Name = "Strength";
             this.Strength.Size = new System.Drawing.Size(52, 22);
             this.Strength.TabIndex = 0;
@@ -65,6 +76,7 @@
             0,
             0,
             0});
+            this.Strength.ValueChanged += new System.EventHandler(this.Strength_ValueChanged);
             // 
             // Dexterity
             // 
@@ -73,6 +85,16 @@
             this.Dexterity.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Dexterity.ForeColor = System.Drawing.SystemColors.Info;
             this.Dexterity.Location = new System.Drawing.Point(27, 58);
+            this.Dexterity.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Dexterity.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Dexterity.Name = "Dexterity";
             this.Dexterity.Size = new System.Drawing.Size(52, 22);
             this.Dexterity.TabIndex = 1;
@@ -82,6 +104,7 @@
             0,
             0,
             0});
+            this.Dexterity.ValueChanged += new System.EventHandler(this.Dexterity_ValueChanged);
             // 
             // Constitution
             // 
@@ -90,6 +113,16 @@
             this.Constitution.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Constitution.ForeColor = System.Drawing.SystemColors.Info;
             this.Constitution.Location = new System.Drawing.Point(27, 87);
+            this.Constitution.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Constitution.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Constitution.Name = "Constitution";
             this.Constitution.Size = new System.Drawing.Size(52, 22);
             this.Constitution.TabIndex = 2;
@@ -99,6 +132,7 @@
             0,
             0,
             0});
+            this.Constitution.ValueChanged += new System.EventHandler(this.Constitution_ValueChanged);
             // 
             // Charisma
             // 
@@ -107,6 +141,16 @@
             this.Charisma.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Charisma.ForeColor = System.Drawing.SystemColors.Info;
             this.Charisma.Location = new System.Drawing.Point(27, 171);
+            this.Charisma.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Charisma.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Charisma.Name = "Charisma";
             this.Charisma.Size = new System.Drawing.Size(52, 22);
             this.Charisma.TabIndex = 5;
@@ -116,6 +160,7 @@
             0,
             0,
             0});
+            this.Charisma.ValueChanged += new System.EventHandler(this.Charisma_ValueChanged);
             // 
             // Wisdom
             // 
@@ -124,6 +169,16 @@
             this.Wisdom.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Wisdom.ForeColor = System.Drawing.SystemColors.Info;
             this.Wisdom.Location = new System.Drawing.Point(27, 143);
+            this.Wisdom.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Wisdom.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Wisdom.Name = "Wisdom";
             this.Wisdom.Size = new System.Drawing.Size(52, 22);
             this.Wisdom.TabIndex = 4;
@@ -133,6 +188,7 @@
             0,
             0,
             0});
+            this.Wisdom.ValueChanged += new System.EventHandler(this.Wisdom_ValueChanged);
             // 
             // Intelligence
             // 
@@ -141,6 +197,16 @@
             this.Intelligence.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Intelligence.ForeColor = System.Drawing.SystemColors.Info;
             this.Intelligence.Location = new System.Drawing.Point(27, 115);
+            this.Intelligence.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.Intelligence.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.Intelligence.Name = "Intelligence";
             this.Intelligence.Size = new System.Drawing.Size(52, 22);
             this.Intelligence.TabIndex = 3;
@@ -150,6 +216,7 @@
             0,
             0,
             0});
+            this.Intelligence.ValueChanged += new System.EventHandler(this.Intelligence_ValueChanged);
             // 
             // label1
             // 
@@ -219,12 +286,22 @@
             this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.button1_Click);
             // 
+            // PointsLeft
+            // 
+            this.PointsLeft.AutoSize = true;
+            this.PointsLeft.Location = new System.Drawing.Point(11, 9);
+            this.PointsLeft.Name = "PointsLeft";
+            this.PointsLeft.Size = new System.Drawing.Size(68, 17);
+            this.PointsLeft.TabIndex = 13;
+            this.PointsLeft.Text = "Point Buy";
+            // 
             // CharacterCreation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(525, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.PointsLeft);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -271,5 +348,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Label PointsLeft;
     }
 }

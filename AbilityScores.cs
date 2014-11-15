@@ -112,6 +112,37 @@ namespace PFCM
             recalculate_all = false;
         }
 
+        //point buy helpers
+        static private int calcCost(int stat)
+        {
+            int val = 0;
+            bool neg = false;
+            if (stat < 10)
+            {
+                neg = true;
+            }
+
+            while (stat != 10)
+            {
+                val += calcVal(stat, neg);
+                stat += neg ? 1 : -1;
+            }
+            return val;
+        }
+
+        static private int calcVal(int stat, bool neg)
+        {
+            int step = ((stat < 10 ? stat - 1 : stat) - 10) / 2;
+            return neg ? (step < 0 ? step : -1) : (step > 0 ? step : 1);
+        }
+
+        static public int calcDiff(int old, int curr)
+        {
+            int old_v = calcCost(old);
+            int curr_v = calcCost(curr);
+            return curr_v - old_v;
+        }
+
         private void calcScores(bool include_temp)
         {
             int str = 0, dex = 0, con = 0, intl = 0, wis = 0, cha = 0;

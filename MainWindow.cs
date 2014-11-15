@@ -16,5 +16,16 @@ namespace PFCM
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form character = new CharacterCreation();
+            character.ShowDialog(this);
+        }
     }
 }
