@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PFCM
 {
@@ -60,6 +61,7 @@ namespace PFCM
                     }
                     catch (Exception e)
                     {
+                        System.Console.WriteLine(e.ToString());
                         System.Console.WriteLine("Whatever you did, don't do that! Pick a number from 1 to 6.");
                     }
                     finally
@@ -191,9 +193,12 @@ namespace PFCM
         {
             HashSet<Player> characters = new HashSet<Player>();
             Player current = new Player();
-            System.Console.WriteLine("Welcome to PFCM");
+            //System.Console.WriteLine("Welcome to PFCM");
             //store magic number somewhere
-            AbilityScores scores = pointBuy(20);
+            //AbilityScores scores = pointBuy(20);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form());
 
         }
     }
