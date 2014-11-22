@@ -89,6 +89,7 @@ namespace PFCM
         scores base_scores;
         scores permanent;
         scores current;
+        int points;
         bool recalculate_all;
         bool recalculate_temp;
 
