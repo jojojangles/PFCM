@@ -8,20 +8,20 @@ namespace PFCM
 
     class Archetype
     {
-        string name;
-        List<ALIGNMENT> allowedAlignments;
-        int classLevel;
-        int hitDie;
-        List<PSkill> classSkills;
-        int skillRanks;
-        float babfraction;
-        Tuple<bool, bool, bool> saves; //<fort,ref,will>
-        HashSet<PAbilities> special;
+        protected string name;
+        protected List<ALIGNMENT> allowedAlignments;
+        protected int classLevel;
+        protected int hitDie;
+        protected List<PSkill> classSkills;
+        protected int skillRanks;
+        protected float babfraction;
+        protected Tuple<bool, bool, bool> saves; //<fort,ref,will>
+        protected HashSet<PAbilities> special;
 
         //Magic System Components
-        PSpellGrowth spellProgression;
-        PSpellList spellList;
-        CASTER_TYPE castType;
+        protected PSpellGrowth spellProgression;
+        protected PSpellList spellList;
+        protected CASTER_TYPE castType;
 
         private int calcSave(bool good)
         {
