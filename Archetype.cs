@@ -62,10 +62,12 @@ namespace PFCM
             set { classLevel = value; }
         }
 
+        /*
         public List<int> spellCount
         {
             get { return spellProgression.get(classLevel); }
         }
+        */
     }
 }
 

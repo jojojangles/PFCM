@@ -42,6 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.PointsLeft = new System.Windows.Forms.Label();
+            this.Class_1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Strength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dexterity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Constitution)).BeginInit();
@@ -68,7 +70,7 @@
             0,
             0});
             this.Strength.Name = "Strength";
-            this.Strength.Size = new System.Drawing.Size(52, 22);
+            this.Strength.Size = new System.Drawing.Size(52, 26);
             this.Strength.TabIndex = 0;
             this.Strength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Strength.Value = new decimal(new int[] {
@@ -96,7 +98,7 @@
             0,
             0});
             this.Dexterity.Name = "Dexterity";
-            this.Dexterity.Size = new System.Drawing.Size(52, 22);
+            this.Dexterity.Size = new System.Drawing.Size(52, 26);
             this.Dexterity.TabIndex = 1;
             this.Dexterity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Dexterity.Value = new decimal(new int[] {
@@ -124,7 +126,7 @@
             0,
             0});
             this.Constitution.Name = "Constitution";
-            this.Constitution.Size = new System.Drawing.Size(52, 22);
+            this.Constitution.Size = new System.Drawing.Size(52, 26);
             this.Constitution.TabIndex = 2;
             this.Constitution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Constitution.Value = new decimal(new int[] {
@@ -152,7 +154,7 @@
             0,
             0});
             this.Charisma.Name = "Charisma";
-            this.Charisma.Size = new System.Drawing.Size(52, 22);
+            this.Charisma.Size = new System.Drawing.Size(52, 26);
             this.Charisma.TabIndex = 5;
             this.Charisma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Charisma.Value = new decimal(new int[] {
@@ -180,7 +182,7 @@
             0,
             0});
             this.Wisdom.Name = "Wisdom";
-            this.Wisdom.Size = new System.Drawing.Size(52, 22);
+            this.Wisdom.Size = new System.Drawing.Size(52, 26);
             this.Wisdom.TabIndex = 4;
             this.Wisdom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Wisdom.Value = new decimal(new int[] {
@@ -208,7 +210,7 @@
             0,
             0});
             this.Intelligence.Name = "Intelligence";
-            this.Intelligence.Size = new System.Drawing.Size(52, 22);
+            this.Intelligence.Size = new System.Drawing.Size(52, 26);
             this.Intelligence.TabIndex = 3;
             this.Intelligence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Intelligence.Value = new decimal(new int[] {
@@ -223,7 +225,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(85, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Strength";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -233,7 +235,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(84, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Dexterity";
             // 
@@ -242,7 +244,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(85, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Constitution";
             // 
@@ -251,7 +253,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(84, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.Size = new System.Drawing.Size(90, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Intelligence";
             // 
@@ -260,7 +262,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(85, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Wisdom";
             // 
@@ -269,7 +271,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(85, 176);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 17);
+            this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Charisma";
             // 
@@ -291,9 +293,62 @@
             this.PointsLeft.AutoSize = true;
             this.PointsLeft.Location = new System.Drawing.Point(11, 9);
             this.PointsLeft.Name = "PointsLeft";
-            this.PointsLeft.Size = new System.Drawing.Size(68, 17);
+            this.PointsLeft.Size = new System.Drawing.Size(76, 20);
             this.PointsLeft.TabIndex = 13;
             this.PointsLeft.Text = "Point Buy";
+            // 
+            // Class_1
+            // 
+            this.Class_1.AutoSize = true;
+            this.Class_1.Location = new System.Drawing.Point(272, 35);
+            this.Class_1.Name = "Class_1";
+            this.Class_1.Size = new System.Drawing.Size(61, 20);
+            this.Class_1.TabIndex = 15;
+            this.Class_1.Text = "Class 1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Monk",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Wizard",
+            "Alchemist",
+            "Cavalier",
+            "Gunslinger",
+            "Inquisitor",
+            "Magus",
+            "Oracle",
+            "Summoner",
+            "Witch",
+            "Antipaladin",
+            "Ninja",
+            "Samurai",
+            "Arcanist",
+            "Bloodrager",
+            "Brawler",
+            "Hunter",
+            "Investigator",
+            "Shaman",
+            "Skald",
+            "Slayer",
+            "Swashbuckler",
+            "Warpriest"});
+            this.comboBox1.Location = new System.Drawing.Point(339, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 28);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CharacterCreation
             // 
@@ -301,6 +356,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(525, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Class_1);
             this.Controls.Add(this.PointsLeft);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label6);
@@ -349,5 +406,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Label PointsLeft;
+        private System.Windows.Forms.Label Class_1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

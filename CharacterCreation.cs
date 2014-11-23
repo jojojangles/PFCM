@@ -14,6 +14,7 @@ namespace PFCM
     {
         int points;
         AbilityScores scores;
+        Archetype class1;
 
         private void updatePoints() 
         {
@@ -27,6 +28,7 @@ namespace PFCM
             points = 20;
             scores = new AbilityScores(10, 10, 10, 10, 10, 10);
             updatePoints();
+            class1 = null;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -141,6 +143,12 @@ namespace PFCM
             {
                 Charisma.Value = scores.CHA_base;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CLASSES class1_value = (CLASSES)Enum.Parse(typeof(CLASSES), comboBox1.ValueMember, true);
+            class1 = new Magus(1);
         }
     }
 }
