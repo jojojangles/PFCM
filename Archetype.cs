@@ -44,17 +44,17 @@ namespace PFCM
 
         public int fort
         {
-            get { return calcSave(saves.item1); }
+            get { return calcSave(saves.Item1); }
         }
 
         public int refl
         {
-            get { return calcSave(saves.item2); }
+            get { return calcSave(saves.Item2); }
         }
 
         public int will
         {
-            get { return calcSave(saves.item3); }
+            get { return calcSave(saves.Item3); }
         }
 
         public int level
