@@ -24,4 +24,5 @@ namespace PFCM
                                         USE_MAGIC_DEVICE};
     public enum CASTER_TYPE : byte { PREPARED_ARCANE=0, SPONTANEOUS_ARCANE, PREPARED_DIVINE,
                                         SPONTANEOUS_DIVINE, NONE};
+    public enum SPELL_PER_DAY : byte { FOUR_LEVEL=0, SIX_LEVEL, NINE_LEVEL, NONE};
 }
