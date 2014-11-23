@@ -13,5 +13,15 @@ namespace PFCM
     public enum ALIGNMENT : byte { LAWFUL_GOOD = 0, NEUTRAL_GOOD, CHAOTIC_GOOD,
                                         LAWFUL_NEUTRAL, NEUTRAL_NEUTRAL, CHAOTIC_NEUTRAL,
                                         LAWFUL_EVIL, NEUTRAL_EVIL, CHAOTIC_EVIL};
-
+    public enum CONSUMABLES : byte { ARCANE_POOL=0};
+    public enum SKILLS : byte { ACROBATICS=0, APPRAISE, BLUFF, CLIMB, CRAFT1, CRAFT2, CRAFT3, DIPLOMACY,
+                                        DISABLE_DEVICE, DISGUISE, ESCAPE_ARTIST, FLY, HANDLE_ANIMAL,
+                                        HEAL, INTIMIDATE, KN_ARCANA, KN_DUNGEONEERING, KN_ENGINEERING,
+                                        KN_GEOGRAPHY, KN_HISTORY, KN_LOCAL, KN_NATURE, KN_NOBILITY,
+                                        KN_PLANES, KN_RELIGION, LINGUISTICS, PERCEPTION, PERFORM1,
+                                        PERFORM2, PROFESSION1, PROFESSION2, RIDE, SENSE_MOTIVE,
+                                        SLEIGHT_OF_HAND, SPELLCRAFT, STEALTH, SURVIVAL, SWIM,
+                                        USE_MAGIC_DEVICE};
+    public enum CASTER_TYPE : byte { PREPARED_ARCANE=0, SPONTANEOUS_ARCANE, PREPARED_DIVINE,
+                                        SPONTANEOUS_DIVINE, NONE};
 }

@@ -8,7 +8,7 @@ namespace PFCM
 {
     class Player
     {
-        List<Tuple<PClass, int>> myClasses; //List of <class object,level>
+        List<Tuple<Archetype, int>> myClasses; //List of <class object,level>
         List<Tuple<PSkill, int>> mySkills; //List of <skill object,total>
         PRace myRace; //Player race object
         AbilityScores scores; //Player ability score tracker
@@ -27,7 +27,7 @@ namespace PFCM
             myRace = new PRace();
             baseAC = 10;
             scores = new AbilityScores();
-            myClasses = new List<Tuple<PClass,int>>();
+            myClasses = new List<Tuple<Archetype,int>>();
             mySkills = new List<Tuple<PSkill, int>>();
             myEquipped = new Dictionary<PBody, PGear>();
             myBackpack = new List<Tuple<PGear, int>>();

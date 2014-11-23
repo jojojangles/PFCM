@@ -80,7 +80,7 @@
     </Compile>
     <Compile Include="PAbilities.cs" />
     <Compile Include="PBody.cs" />
-    <Compile Include="Pclass.cs" />
+    <Compile Include="Archetype.cs" />
     <Compile Include="PFeat.cs" />
     <Compile Include="PFCM.cs" />
     <Compile Include="PGear.cs" />
