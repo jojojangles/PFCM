@@ -17,8 +17,6 @@ namespace PFCM
             babfraction = .75f;
             saves = new Tuple<bool, bool, bool>(true, false, true);
             special = new HashSet<PAbilities>();
-            spellProgression = new SixLevelCaster();
-            spellList = new MagusSpellList();
             castType = CASTER_TYPE.PREPARED_ARCANE;
         }
     }

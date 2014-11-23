@@ -19,9 +19,8 @@ namespace PFCM
         protected HashSet<PAbilities> special;
 
         //Magic System Components
-        protected PSpellGrowth spellProgression;
-        protected PSpellList spellList;
         protected CASTER_TYPE castType;
+        protected SPELL_PER_DAY spellProgression;
 
         private int calcSave(bool good)
         {
